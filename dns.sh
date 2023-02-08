@@ -20,6 +20,7 @@ printf '
 1. Shecan             2. Electro
 3. Server.ir          4. Radar Game
 5. DNSPro.ir          6. Begzar  
+7. Host Iran          8. 403.online
 10. Cloudflare        11. Open DNS
 12. Google            13. Quad
 14. PiHole            15. UncensoredDNS     
@@ -79,6 +80,12 @@ if [ "$var" -eq "7" ]; then
 	echo "[✓]${GREEN}Host Iran set as DNS server.${NC} Checking..."
 fi
 
+
+# 403.online
+if [ "$var" -eq "8" ]; then
+	networksetup -setdnsservers Wi-Fi 10.202.10.202 10.202.10.102
+	echo "[✓]${GREEN}Host Iran set as DNS server.${NC} Checking..."
+fi
 
 # Cloudflare
 if [ "$var" -eq "10" ]; then
