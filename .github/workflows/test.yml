@@ -1,0 +1,17 @@
+name: Test DNS Script
+
+on: [push, pull_request]
+
+jobs:
+  test-script:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Make script executable
+      run: chmod +x ./dns.sh
+
+    - name: Run the script
+      run: ./dns.sh 1
