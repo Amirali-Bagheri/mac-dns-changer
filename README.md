@@ -58,6 +58,12 @@ This shell script enables setting DNS servers for WiFi (WLAN interface) on MacOS
 39. [Baidu](https://dudns.baidu.com/intro/publicdns)
 40. [114DNS](https://www.114dns.com)
 
+## Screenshots:
+
+<img src="images/1.png" width="400">
+<img src="images/2.png" width="400" >
+
+
 ## Usage:
 
 ### Download and Run Script from GitHub Repository
@@ -91,7 +97,7 @@ wget https://raw.githubusercontent.com/Amirali-Bagheri/mac-dns-changer/main/dns.
 You can directly run the script with an option. For example, to automatically find the best DNS server for 403 Unlock, use:
 
 ```bash
-sh ./dns.sh 1
+sudo sh ./dns.sh 1
 ```
 
 ### Automate DNS Changes with Cron
@@ -101,7 +107,7 @@ To automate the DNS changes and find the best server every hour, you can set up 
 1. Open your crontab file for editing:
 
 ```bash
-crontab -e
+sudo crontab -e
 ```
 
 2. Add the following line to schedule the dns.sh script to run every hour:
